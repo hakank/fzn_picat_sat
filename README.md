@@ -9,3 +9,12 @@ $ make -f  Makefile.fzn_picat_sat.linux64
 For Mac:
 
 $ make -f  Makefile.fzn_picat_sat.mac
+
+
+The skeleton of the .msc file as well as the .mzn global files are available at https://github.com/nfzhou/fzn_picat:
+
+- https://github.com/nfzhou/fzn_picat/blob/main/picat.msc.in
+
+- https://github.com/nfzhou/fzn_picat/tree/main/mznlib
+
+
