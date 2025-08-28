@@ -18,3 +18,5 @@ The skeleton of the .msc file as well as the .mzn global files are available at 
 - https://github.com/nfzhou/fzn_picat/tree/main/mznlib
 
 
+The Linux exectutable (fzn_picat_sat) that was used in the MiniZinc Challeng 2025 is also available at that GitHub repo.
+
