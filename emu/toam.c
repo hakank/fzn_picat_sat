@@ -55,8 +55,12 @@ void exception_handler(int signo)
 {
     switch (signo) {
 #ifdef BPSOLVER
+#ifdef WIN32
+    case SIGSEGV:
+#else
     case SIGXCPU:
     case SIGSEGV:
+#endif
         fprintf(stderr, "%% unhandled signal %d\n", signo);
         //    fprintf(stdout,"%% UNKNOWN\n");
         exit(1);
@@ -95,10 +99,15 @@ void init_signals() {
     if (signal(SIGINT, exception_handler) == SIG_ERR)
         printf("can't catch SIGINT\n");
 #ifdef BPSOLVER
+#ifdef WIN32
+    if (signal(SIGSEGV, exception_handler) == SIG_ERR)
+        printf("can't catch SIGINT\n");
+#else    
     if (signal(SIGXCPU, exception_handler) == SIG_ERR)
         printf("can't catch SIGINT\n");
     if (signal(SIGSEGV, exception_handler) == SIG_ERR)
         printf("can't catch SIGINT\n");
+#endif
 #endif
 }
 
