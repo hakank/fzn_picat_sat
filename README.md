@@ -10,6 +10,9 @@ For Mac:
 
 $ make -f  Makefile.fzn_picat_sat.mac
 
+For Windows (MinGW64)
+
+$ make -f  Makefile.fzn_picat_sat.mingw64
 
 The skeleton of the .msc file as well as the .mzn global files are available at https://github.com/nfzhou/fzn_picat:
 
